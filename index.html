@@ -240,13 +240,13 @@
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(244, 236, 220, 0.92);
+    background: var(--deep);
     backdrop-filter: saturate(1.1) blur(6px);
     -webkit-backdrop-filter: saturate(1.1) blur(6px);
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid var(--warm);
     transition: border-color .3s var(--ease), background .3s var(--ease);
   }
-  .site-header.scrolled { border-bottom-color: var(--rule); background: rgba(244, 236, 220, 0.96); }
+  .site-header.scrolled { border-bottom-color: var(--warm); background: var(--deep-2); }
 
   .header-inner {
     display: grid;
@@ -262,7 +262,7 @@
     font-size: 19px;
     line-height: 1.2;
     letter-spacing: -0.01em;
-    color: var(--ink);
+    color: var(--cream);
   }
   .logo .mark {
     display: inline-block;
@@ -274,7 +274,7 @@
     vertical-align: middle;
     transform: translateY(-1px);
   }
-  .logo em { font-style: italic; font-weight: 300; color: var(--muted); }
+  .logo em { font-style: italic; font-weight: 300; color: var(--warm-soft); }
 
   .primary-nav {
     display: flex;
@@ -285,9 +285,10 @@
     font-size: 13px;
     font-weight: 500;
     letter-spacing: 0.02em;
-    color: var(--ink);
+    color: var(--cream);
     position: relative;
     padding-block: 6px;
+    transition: color .3s var(--ease);
   }
   .primary-nav a::after {
     content: "";
@@ -299,6 +300,7 @@
     transform-origin: left;
     transition: transform .3s var(--ease);
   }
+  .primary-nav a:hover { color: var(--warm-soft); }
   .primary-nav a:hover::after { transform: scaleX(1); }
 
   .header-right {
@@ -311,11 +313,23 @@
     align-items: center;
     gap: 8px;
     font-size: 14px;
-    color: var(--ink);
+    color: var(--cream);
     font-weight: 500;
+    transition: color .3s var(--ease);
   }
   .header-phone svg { width: 14px; height: 14px; stroke: var(--warm); }
-  .header-phone:hover { color: var(--warm); }
+  .header-phone:hover { color: var(--warm-soft); }
+
+  .site-header .btn-primary {
+    background: var(--cream);
+    color: var(--deep);
+    border-color: var(--cream);
+  }
+  .site-header .btn-primary:hover {
+    background: var(--warm);
+    color: var(--deep);
+    border-color: var(--warm);
+  }
 
   /* ---------- Trust ribbon ---------- */
 
