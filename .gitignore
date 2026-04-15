@@ -1,0 +1,8 @@
+node_modules/
+*.log
+*.md
+*.json
+*.js
+sample-parsley.html
+screenshots/
+.claude/
